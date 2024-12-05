@@ -1,0 +1,46 @@
+{
+    "appId": "com.developandfix.demo",
+    "extends": null,
+    "productName": "Bug Demo App",
+    "copyright": "Copyright 2024 Develop and Fix, Inc.",
+    "generateUpdatesFilesForAllChannels": true,
+    "detectUpdateChannel": true,
+    "directories": {
+        "output": "out",
+        "buildResources": "assets",
+    },
+    "files": [
+        "main/*.js",
+        "dist/*.*",
+    ],
+    "protocols": [
+        {
+            "name": "File",
+            "schemes": [
+                "file:"
+            ],
+            role: "Viewer"
+        }
+    ],
+    "asar": true,
+    "asarUnpack": "node_modules",
+    "mac": {
+        target: {
+            target: 'default',
+        },
+        "category": "public.app-category.photography",
+        "gatekeeperAssess": false,
+        "hardenedRuntime": true,
+        "darkModeSupport": true,
+        "mergeASARs": false,
+    },
+    "win": {
+        "target": "nsis",
+    },
+    "nsis": {
+        "oneClick": false,
+        "perMachine": false,
+        "runAfterFinish": true,
+    },
+}
+  
